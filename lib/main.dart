@@ -8,7 +8,7 @@ class TestVisionCheck extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Dante',
+      title: 'Flutter Dante I made this change using command line',
       theme: ThemeData().copyWith(
         secondaryHeaderColor: Color(0xFF15C96C),
         primaryColor: Color(0xFF15C96C),
