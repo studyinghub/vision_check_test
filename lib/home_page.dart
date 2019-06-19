@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'reuse_card.dart';
+import 'components/reuse_card.dart';
 
 class HomePage extends StatelessWidget {
   @override
