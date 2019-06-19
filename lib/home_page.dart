@@ -46,10 +46,19 @@ class HomePage extends StatelessWidget {
                       colour: Color(0xFFFFFFFF),
                     ),
                   ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
                 ],
               ),
             ),
           ],
+        ),
+        bottomNavigationBar: SizedBox(
+          child: Icon(
+            Icons.check,
+            size: 100.0,
+          ),
         ),
       ),
     );
