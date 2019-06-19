@@ -51,7 +51,7 @@ class HomePage extends StatelessWidget {
             ),
           ],
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: new FloatingActionButton(
           child: new Icon(Icons.add),
           onPressed: () {},
@@ -63,11 +63,17 @@ class HomePage extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
               new IconButton(
-                icon: new Icon(Icons.menu),
+                icon: new Icon(
+                  Icons.menu,
+                  size: 40.0,
+                ),
                 onPressed: () {},
               ),
               new IconButton(
-                icon: new Icon(Icons.search),
+                icon: new Icon(
+                  Icons.search,
+                  size: 40.0,
+                ),
                 onPressed: () {},
               ),
             ],
