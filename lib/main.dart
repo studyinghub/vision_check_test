@@ -8,7 +8,7 @@ class TestVisionCheck extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter David Kim',
+      title: 'David Kim esport champion',
       theme: ThemeData().copyWith(
         secondaryHeaderColor: Color(0xFF15C96C),
         primaryColor: Color(0xFF15C96C),
