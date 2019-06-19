@@ -20,17 +20,32 @@ class HomePage extends StatelessWidget {
             Expanded(
               child: Row(
                 children: <Widget>[
-                  Expanded(child: new ReusableCard(colour: Color(0xFFFFFFFF))),
-                  Expanded(child: new ReusableCard(colour: Color(0xFFFFFFFF))),
+                  Expanded(
+                    child: new ReusableCard(
+                      colour: Color(0xFFFFFFFF),
+                    ),
+                  ),
+                  Expanded(
+                    child: new ReusableCard(
+                      colour: Color(0xFFFFFFFF),
+                    ),
+                  ),
                 ],
               ),
             ),
-            new ReusableCard(colour: Colors.black),
             Expanded(
               child: Row(
                 children: <Widget>[
-                  Expanded(child: new ReusableCard(colour: Color(0xFFFFFFFF))),
-                  Expanded(child: new ReusableCard(colour: Color(0xFFFFFFFF))),
+                  Expanded(
+                    child: new ReusableCard(
+                      colour: Color(0xFFFFFFFF),
+                    ),
+                  ),
+                  Expanded(
+                    child: new ReusableCard(
+                      colour: Color(0xFFFFFFFF),
+                    ),
+                  ),
                 ],
               ),
             ),
