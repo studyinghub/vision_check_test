@@ -16,7 +16,7 @@ class TestVisionCheck extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child: Text('Vision Test')),
+          title: Center(child: Text('Vision Check')),
           backgroundColor: Color(0xFF15C96C),
         ),
       ),
