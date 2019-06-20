@@ -7,6 +7,18 @@ class CategoryList extends StatelessWidget {
         home: Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
+        actions: <Widget>[
+          IconButton(
+            icon: new Icon(
+              Icons.close,
+              color: Colors.black,
+              size: 30,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+        ],
         title: Text(
           "Choose a Catergory",
           style: TextStyle(
