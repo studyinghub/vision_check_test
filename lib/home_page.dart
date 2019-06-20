@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'components/reuse_card.dart';
+import 'category_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -32,7 +33,12 @@ class HomePage extends StatelessWidget {
                 iconSize: 100,
                 onPressed: () {
                   //add a dream
-                  print('clicked');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CategoryList(),
+                    ),
+                  );
                 },
               ),
             ),
