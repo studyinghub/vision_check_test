@@ -7,74 +7,69 @@ class HomePage extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData().copyWith(
         secondaryHeaderColor: Color(0xFF15C96C),
-        primaryColor: Color(0xFF15C96C),
+        primaryColor: Color(0xFFFFFFFF),
         scaffoldBackgroundColor: Color(0xFFD9DFE3),
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My Visions'),
-          backgroundColor: Color(0xFF15C96C),
+          title: Text(
+            'My Visions',
+            style: TextStyle(
+              color: Color(0xFF39414C),
+              fontSize: 28.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          backgroundColor: Color(0xFFFFFFFF),
         ),
-        body: Column(
-          children: <Widget>[
-            Expanded(
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    child: new ReusableCard(
-                      colour: Color(0xFFFFFFFF),
-                    ),
-                  ),
-                  Expanded(
-                    child: new ReusableCard(
-                      colour: Color(0xFFFFFFFF),
-                    ),
-                  ),
-                ],
+        body: Container(
+          child: ReusableCard(
+            cardChild: Container(
+              height: 300,
+              width: 200,
+              child: IconButton(
+                icon: Icon(Icons.add),
+                iconSize: 100,
+                onPressed: () {
+                  //add a dream
+                  print('clicked');
+                },
               ),
             ),
-            Expanded(
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    child: new ReusableCard(
-                      colour: Color(0xFFFFFFFF),
-                    ),
-                  ),
-                  Expanded(
-                    child: new ReusableCard(
-                      colour: Color(0xFFFFFFFF),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: new FloatingActionButton(
-          child: new Icon(Icons.add),
-          onPressed: () {},
+          ),
         ),
         bottomNavigationBar: new BottomAppBar(
-          color: Colors.green,
+          color: Color(0xFFFFFFFF),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
               new IconButton(
                 icon: new Icon(
-                  Icons.menu,
-                  size: 40.0,
+                  Icons.gps_fixed,
+                  size: 35.0,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  //when pressed this should lead to the target's page
+                },
               ),
               new IconButton(
                 icon: new Icon(
-                  Icons.search,
-                  size: 40.0,
+                  Icons.home,
+                  size: 35.0,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  //when pressed this should lead to the home page again
+                },
+              ),
+              new IconButton(
+                icon: new Icon(
+                  Icons.settings,
+                  size: 33.0,
+                ),
+                onPressed: () {
+                  //this should lead to the settings section
+                },
               ),
             ],
           ),
