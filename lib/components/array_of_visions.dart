@@ -10,4 +10,11 @@ class ArrayOfVisions {
       ReusableCard(),
     );
   }
+
+  bool isEmpty() {
+    if (visions.isEmpty) {
+      return true;
+    }
+    return false;
+  }
 }

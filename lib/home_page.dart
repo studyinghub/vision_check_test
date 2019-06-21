@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'components/reuse_card.dart';
+import 'components/BottomHomeBar.dart';
 import 'category_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -44,42 +45,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ),
-        bottomNavigationBar: new BottomAppBar(
-          color: Color(0xFFFFFFFF),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            mainAxisSize: MainAxisSize.max,
-            children: <Widget>[
-              new IconButton(
-                icon: new Icon(
-                  Icons.gps_fixed,
-                  size: 35.0,
-                ),
-                onPressed: () {
-                  //when pressed this should lead to the target's page
-                },
-              ),
-              new IconButton(
-                icon: new Icon(
-                  Icons.home,
-                  size: 35.0,
-                ),
-                onPressed: () {
-                  //when pressed this should lead to the home page again
-                },
-              ),
-              new IconButton(
-                icon: new Icon(
-                  Icons.settings,
-                  size: 33.0,
-                ),
-                onPressed: () {
-                  //this should lead to the settings section
-                },
-              ),
-            ],
-          ),
-        ),
+        bottomNavigationBar: new BottomHomeBar(),
       ),
     );
   }
