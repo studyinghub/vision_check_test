@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'dart:collection';
-import 'components/reuse_card.dart';
 import 'components/BottomHomeBar.dart';
 import 'the_actual_steps_screen.dart';
+import 'components/date_picker.dart';
+
+String backgroundText = "No Dreams";
 
 class Steps extends StatefulWidget {
   @override
@@ -10,6 +12,7 @@ class Steps extends StatefulWidget {
 }
 
 class _StepsState extends State<Steps> {
+  DatePicker dp = new DatePicker();
   ListQueue<FlatButton> listOfStepsOnScreen = new ListQueue(10);
   FlatButton tempForAddingButtonInQueue;
   bool pressedAddForFirstTime = false;
@@ -45,7 +48,7 @@ class _StepsState extends State<Steps> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              pressedAddForFirstTime ? '' : 'No Dreams',
+              backgroundText,
             ),
           ],
         ),
@@ -60,7 +63,7 @@ class _StepsState extends State<Steps> {
         onPressed: () {
           //this is where the pop up should come out and stuff
           setState(() {
-            pressedAddForFirstTime = true;
+            backgroundText = "";
             tempForAddingButtonInQueue = FlatButton(
               onPressed: () {},
               child: Card(),
@@ -72,7 +75,7 @@ class _StepsState extends State<Steps> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => TheActualSteps(),
+              builder: (context) => DatePicker(),
             ),
           );
         },
