@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'step_builder.dart';
+
+IconData usersIconData = Icons.favorite;
+String chosenCategoryText = "";
 
 class CategoryList extends StatelessWidget {
   @override
@@ -98,7 +102,16 @@ class Category extends StatelessWidget {
         child: FlatButton(
           padding: EdgeInsets.all(30),
           color: Colors.white,
-          onPressed: () {},
+          onPressed: () {
+            usersIconData = this.iconData;
+            chosenCategoryText = this.text;
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Steps(),
+              ),
+            );
+          },
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
