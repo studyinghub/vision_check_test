@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:collection';
 import 'components/BottomHomeBar.dart';
-import 'the_actual_steps_screen.dart';
 import 'components/date_picker.dart';
+import 'components/category_icons.dart';
 
 String backgroundText = "No Dreams";
 
@@ -22,25 +22,42 @@ class _StepsState extends State<Steps> {
     return Scaffold(
       appBar: AppBar(
         actions: <Widget>[
-          IconButton(
-            icon: new Icon(
-              Icons.close,
-              color: Colors.black,
-              size: 30,
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-            },
+          Row(
+            children: <Widget>[
+              Icon(
+                usersIconData,
+                color: Colors.black,
+                size: 30,
+              ),
+              Text(
+                "Your steps",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25,
+                  color: Color(0xFF15C96C),
+                ),
+              ),
+              IconButton(
+                icon: new Icon(
+                  Icons.close,
+                  color: Colors.black,
+                  size: 30,
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ],
           ),
         ],
-        title: Text(
-          "Your steps",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 25,
-            color: Color(0xFF15C96C),
-          ),
-        ),
+//        title: Text(
+//          "Your steps",
+//          style: TextStyle(
+//            fontWeight: FontWeight.bold,
+//            fontSize: 25,
+//            color: Color(0xFF15C96C),
+//          ),
+//        ),
         backgroundColor: Colors.white,
       ),
       body: Center(
