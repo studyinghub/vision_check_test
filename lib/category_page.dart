@@ -21,7 +21,7 @@ class CategoryList extends StatelessWidget {
           ),
         ],
         title: Text(
-          "Choose a Catergory",
+          "Choose a Category",
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 25,

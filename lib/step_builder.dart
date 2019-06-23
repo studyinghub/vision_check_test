@@ -23,6 +23,8 @@ class _StepsState extends State<Steps> {
       appBar: AppBar(
         actions: <Widget>[
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisSize: MainAxisSize.max,
             children: <Widget>[
               Icon(
                 usersIconData,
