@@ -13,6 +13,7 @@ class ReusableCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlatButton(
+      onPressed: onPressed,
       child: Container(
         child: cardChild,
         margin: EdgeInsets.only(top: 15.0),

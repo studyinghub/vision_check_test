@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'components/reuse_card.dart';
 import 'components/BottomHomeBar.dart';
-import 'category_page.dart';
+import 'components/buttons_on_homepage.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -24,27 +23,7 @@ class HomePage extends StatelessWidget {
           ),
           backgroundColor: Color(0xFFFFFFFF),
         ),
-        body: Container(
-          child: ReusableCard(
-            cardChild: Container(
-              height: 300,
-              width: 200,
-              child: IconButton(
-                icon: Icon(Icons.add),
-                iconSize: 100,
-                onPressed: () {
-                  //add a dream
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => CategoryList(),
-                    ),
-                  );
-                },
-              ),
-            ),
-          ),
-        ),
+        body: new ButtonsOnHomePage(),
         bottomNavigationBar: new BottomHomeBar(),
       ),
     );
