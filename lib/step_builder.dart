@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:collection';
 import 'components/BottomHomeBar.dart';
-import 'components/date_picker.dart';
 import 'components/category_icons.dart';
+import 'StepMakerPage.dart';
 
 String backgroundText = "No Dreams";
 
@@ -12,9 +12,8 @@ class Steps extends StatefulWidget {
 }
 
 class _StepsState extends State<Steps> {
-  DatePicker dp = new DatePicker();
-  ListQueue<FlatButton> listOfStepsOnScreen = new ListQueue(10);
-  FlatButton tempForAddingButtonInQueue;
+  List steps = List(10);
+  Card tempForAddingButtonInQueue;
   bool pressedAddForFirstTime = false;
 
   @override
@@ -23,7 +22,7 @@ class _StepsState extends State<Steps> {
       appBar: AppBar(
         actions: <Widget>[
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
               Icon(
@@ -39,27 +38,20 @@ class _StepsState extends State<Steps> {
                   color: Color(0xFF15C96C),
                 ),
               ),
-              IconButton(
-                icon: new Icon(
-                  Icons.close,
-                  color: Colors.black,
-                  size: 30,
-                ),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
             ],
           ),
+          IconButton(
+            icon: new Icon(
+              Icons.close,
+              color: Colors.black,
+              size: 30,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
         ],
-//        title: Text(
-//          "Your steps",
-//          style: TextStyle(
-//            fontWeight: FontWeight.bold,
-//            fontSize: 25,
-//            color: Color(0xFF15C96C),
-//          ),
-//        ),
+//
         backgroundColor: Colors.white,
       ),
       body: Center(
@@ -83,19 +75,11 @@ class _StepsState extends State<Steps> {
           //this is where the pop up should come out and stuff
           setState(() {
             backgroundText = "";
-            tempForAddingButtonInQueue = FlatButton(
-              onPressed: () {},
-              child: Card(),
-            );
           });
-          listOfStepsOnScreen.add(tempForAddingButtonInQueue);
-          loopToShowTheButtons();
 
           Navigator.push(
             context,
-            MaterialPageRoute(
-              builder: (context) => DatePicker(),
-            ),
+            MaterialPageRoute(builder: (context) => StepMaker()),
           );
         },
         label: Text(
@@ -104,11 +88,5 @@ class _StepsState extends State<Steps> {
       ),
       bottomNavigationBar: new BottomHomeBar(),
     );
-  }
-
-  void loopToShowTheButtons() {
-    for (int i = 0; i < listOfStepsOnScreen.length; i++) {
-      print('working');
-    }
   }
 }
